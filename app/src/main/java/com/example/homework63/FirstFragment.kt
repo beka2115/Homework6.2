@@ -57,7 +57,7 @@ class FirstFragment : Fragment() {
                 if (result) {
                     getImage()
                 } else {
-                    Toast.makeText(context, "buy", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Give your permission", Toast.LENGTH_LONG).show()
                 }
             }
     }
