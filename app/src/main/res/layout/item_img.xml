@@ -4,29 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_before_click"
-    android:padding="@dimen/dp8"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/dp8">
 
-    <ImageView
-        app:layout_constraintCircleRadius="@dimen/dp8"
-        android:background="@drawable/bg_before_click"
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgRecycler"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp102"
         android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundimageview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:padding="36dp"
-        android:src="@drawable/baseline_check"
         android:id="@+id/imgRecyclerAfter"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp102"
         android:background="@drawable/bg_after_clicked"
+        android:padding="36dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/baseline_check"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imgRecycler"
         app:layout_constraintEnd_toEndOf="@+id/imgRecycler"

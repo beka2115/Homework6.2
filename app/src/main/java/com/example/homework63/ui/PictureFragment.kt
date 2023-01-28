@@ -53,6 +53,7 @@ class PictureFragment : Fragment() {
         registerPermission()
         (activity as AppCompatActivity).supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
         (activity as AppCompatActivity).supportActionBar?.title = "Выбор фотографий"
+        imgSend.clear()
     }
 
     private fun init() {
