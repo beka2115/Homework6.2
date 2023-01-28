@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/bg_before_click"
     android:padding="@dimen/dp8"
     android:orientation="vertical">
 
     <ImageView
+        app:layout_constraintCircleRadius="@dimen/dp8"
+        android:background="@drawable/bg_before_click"
         android:id="@+id/imgRecycler"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp102"
-        android:background="@drawable/bg_after_click"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
 
     <ImageView
-        android:src="@drawable/baseline_check_24"
+        android:padding="36dp"
+        android:src="@drawable/baseline_check"
         android:id="@+id/imgRecyclerAfter"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp102"
-        android:background="@drawable/bg_befor_clicked"
+        android:background="@drawable/bg_after_clicked"
         android:scaleType="centerCrop"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imgRecycler"
         app:layout_constraintEnd_toEndOf="@+id/imgRecycler"
         app:layout_constraintStart_toStartOf="@+id/imgRecycler"
-        app:layout_constraintTop_toTopOf="@+id/imgRecycler" />
+        app:layout_constraintTop_toTopOf="@+id/imgRecycler"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

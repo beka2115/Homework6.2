@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecievedFragment">
+    tools:context=".ui.RecievedFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/imgRecyclerRecived"
@@ -17,8 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dp16"
-        android:src="@drawable/baseline_add_24"
+        android:src="@drawable/baseline_keyboard_backspace_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

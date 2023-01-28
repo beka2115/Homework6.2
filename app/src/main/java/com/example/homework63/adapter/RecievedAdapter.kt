@@ -1,4 +1,4 @@
-package com.example.homework63
+package com.example.homework63.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import com.example.homework63.databinding.ItemRecievedBinding
 
 class RecievedAdapter : RecyclerView.Adapter<RecievedAdapter.RecievedViewHolder>() {
 
-    private val imgList: ArrayList<RecievedModel> = arrayListOf()
+    private val imgList: ArrayList<String> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecievedViewHolder {
         return RecievedViewHolder(
@@ -30,7 +30,7 @@ class RecievedAdapter : RecyclerView.Adapter<RecievedAdapter.RecievedViewHolder>
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun addImg(newImg: List<RecievedModel>) {
+    fun addImg(newImg: ArrayList<String>) {
         this.imgList.clear()
         this.imgList.addAll(newImg)
         notifyDataSetChanged()
@@ -38,8 +38,8 @@ class RecievedAdapter : RecyclerView.Adapter<RecievedAdapter.RecievedViewHolder>
 
     inner class RecievedViewHolder(private val binding: ItemRecievedBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(img: RecievedModel) {
-            Glide.with(binding.imgRecyclerRecived).load(img.img).into(binding.imgRecyclerRecived)
+        fun bind(img: String) {
+            Glide.with(binding.imgRecyclerRecived).load(img).into(binding.imgRecyclerRecived)
         }
     }
 }

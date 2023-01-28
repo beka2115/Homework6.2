@@ -53,5 +53,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     //circleIndicator
     implementation 'me.relex:circleindicator:2.1.6'
+    //cardView
+    implementation "androidx.cardview:cardview:1.0.0"
 
 }
